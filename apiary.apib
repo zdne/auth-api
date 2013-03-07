@@ -13,6 +13,9 @@ This API demonstarates using [Basic HTTP Authentication][1] and [OAuth][2] as us
 ## List your authorizations
 You can **only** access your own tokens, and only through **Basic Authentication**.
 
+## Authentication
+**Basic HTTP Authentication**
+
 ## Request Headers
 + Authorization ... [Base64](http://en.wikipedia.org/wiki/Base64) encoded string literal in form _"username:password"_ preceeded by authorization method and its space.
 
@@ -43,20 +46,18 @@ GET /authorizations
 ## Create authorization
 To create tokens for a particular OAuth application, you must provide its **client ID** and **secret**, found on the OAuth application settings page, linked from your OAuth applications listing on GitHub.
 
+## Authentication
+**Basic HTTP Authentication**
+
 ## Request Headers
 + Authorization ... [Base64](http://en.wikipedia.org/wiki/Base64) encoded string literal in form _"username:password"_ preceeded by authorization method and its space.
 
 ## Request Parameters
-* scopes
-	Optional array - A list of scopes that this authorization is in.
-* note
-	Optional string - A note to remind you what the OAuth token is for.
-* note_url
-	Optional string - A URL to remind you what app the OAuth token is for.
-* client_id
-	Optional String - The 20 character OAuth app client key for which to create the token.
-* client_secret
-	Optional String - The 40 character OAuth app client secret for which to create the token.
++ scopes ... Optional array - A list of scopes that this authorization is in.
++ note ... Optional string - A note to remind you what the OAuth token is for.
++ note_url ... Optional string - A URL to remind you what app the OAuth token is for.
++ client_id ... Optional String - The 20 character OAuth app client key for which to create the token.
++ client_secret ... Optional String - The 40 character OAuth app client secret for which to create the token.
 
 POST /authorizations
 > Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
