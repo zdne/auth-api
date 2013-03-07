@@ -5,6 +5,8 @@ HOST: https://acme.com
 ---
 This API demonstarates using [Basic HTTP Authentication][1] and [OAuth][2] as used by [GitHub API v3][3].
 
+First you create a new (or acquire existing) OAuth token using Basic Authentication. After you have acquired your token you can use it to access other resources within token' scope.
+
 [1]: http://en.wikipedia.org/wiki/Basic_access_authentication
 [2]: http://oauth.net
 [3]: http://developer.github.com/v3/oauth
@@ -95,8 +97,9 @@ POST /authorizations
 
 --
 Authorized access
-Following resource demonstrates use of an **OAuth token** previously aquired using **Authorization access & control**.
+Following resource demonstrates use of an **OAuth token** previously acquired using **Authorization access & control**.
 --
+
 
 ## List Gists
 List the authenticated user’s gists.
@@ -105,7 +108,7 @@ List the authenticated user’s gists.
 Gist scope
 
 ## Parameters
-+ access_token ... **OAuth token** with gist scope.
++ access_token = abc123 ... **OAuth token** with gist scope.
 
 GET /gists{?access_token}
 < 200
