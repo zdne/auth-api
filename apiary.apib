@@ -3,11 +3,21 @@ HOST: http://acme.com
 --- Authentication API ---
 
 ---
-This API demonstarates using Basic HTTP Auth and OAuth as used by [GitHub API v3](http://developer.github.com/v3/oauth/)
+This API demonstarates using Basic [HTTP Authentication][1] and [OAuth][2] as used by [GitHub API v3][3].
+
+[1]: http://en.wikipedia.org/wiki/Basic_access_authentication
+[2]: http://oauth.net
+[3]: http://developer.github.com/v3/oauth
+
 ---
 
-List your authorizations. You can only access your own tokens, and only through **Basic Authentication**.
+## List your authorizations
+You can **only** access your own tokens, and only through **Basic Authentication**.
+
+## Parameters
++ Authorization ... [Base64](http://en.wikipedia.org/wiki/Base64) encoded string literal in form _"username:password"_ preceeded by authorization method and its space.
 GET /authorizations
+> Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
 < 200
 < Content-Type: application/json
 [
